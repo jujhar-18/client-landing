@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 // 🌐 Backend URL — change this if your server runs on a different port
-const API_URL = "http://localhost:5000";
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
 // ─── Service Options ────────────────────────────────────────────
 const SERVICES = [
