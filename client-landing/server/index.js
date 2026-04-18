@@ -11,8 +11,8 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Path to our "database" file (just a JSON file — perfect for beginners!)
-const DB_FILE = path.join(__dirname, "clients.json");
+// Path to our "database" file (using /tmp for serverless environments like Lambda)
+const DB_FILE = path.join("/tmp", "clients.json");
 
 // ─── Middleware ────────────────────────────────────────────────
 // Allow React frontend to talk to this server
